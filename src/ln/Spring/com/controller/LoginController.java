@@ -33,7 +33,7 @@ public class LoginController {
 	}*/
 	
 	 @RequestMapping(value="/login", method=RequestMethod.POST)
-	    public String submitForm(@Validated User user, BindingResult result, Model m) {
+	    public String validateUser(@Validated User user, BindingResult result, Model m) {
 	        if(result.hasErrors()) {
 	            return "login";
 	        }
