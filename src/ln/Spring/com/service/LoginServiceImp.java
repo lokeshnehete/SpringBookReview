@@ -2,7 +2,6 @@ package ln.Spring.com.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import ln.Spring.com.dao.LoginDao;
 import ln.Spring.com.pojos.User;
 

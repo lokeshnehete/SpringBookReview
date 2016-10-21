@@ -4,12 +4,12 @@
 
 <html>
 <head>
-<title>Insert title here</title>
+<title>loginPage</title>
 </head>
 <body>
  <form method="post" action="login">
             
- <table border="1">
+ <table border="2">
                     <tr><td><b>UserName</b></td> <td><input type="text" name="username"></td></tr>
                     <tr><td><b>Password</b></td> <td><input type="password" name="password"></td></tr>
                     <tr>
@@ -26,6 +26,6 @@
   </table>
                 
 </form>
-<a href="register.jsp">New User</a>
+<a href="registerPage">New User</a>
 </body>
 </html>

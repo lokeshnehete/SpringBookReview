@@ -8,7 +8,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Repository;
-
 import ln.Spring.com.pojos.User;
 
 
@@ -17,6 +16,7 @@ public class LoginDaoImp implements LoginDao  {
 	
 	@Override
 	public User validateUser(User user) {
+		
 		Configuration cfg=new Configuration();  
 	    cfg.configure("hibernate.cfg.xml");  
 	    
@@ -26,18 +26,17 @@ public class LoginDaoImp implements LoginDao  {
 	    Query query = session.createQuery("from User u where u.username= :username and password = :password")
 				.setParameter("username", user.getUsername()).setParameter("password", user.getPassword());
 		t.commit();
+		@SuppressWarnings("unchecked")
 		List<User> result = query.list();
-		if (result.size() == 1)
-		{
-			
-			user.setUsername(result.get(0).getUsername());
-			return user;
-		} else
-		{
-			System.out.println("Not working");
-			
-			return user;
-		}
+		
+	
+		User user3=null;
+		if(result!=null)
+		for (User user2 : result) {
+			System.out.println(user2.getUsername());
+			user3=user2;
+		}	
+		return user3;
 	}
 
 	@Override

@@ -7,7 +7,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name="book")
 public class Book {
+	@Id
 	private int bookId;
+	
 	private String bookName;
 	private String bookAuther;
 	private String bookReview;
@@ -24,7 +26,7 @@ public class Book {
 	public int getBookId() {
 		return bookId;
 	}
-	@Id
+	
 	public void setBookId(int bookId) {
 		this.bookId = bookId;
 	}

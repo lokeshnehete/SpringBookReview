@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Registation</title>
 </head>
 <body>
 <form action="register" method="post">
-<table border="1" colspan="2">
+<table  border="2">
 		<tr>
 			<td>
 				Name:
